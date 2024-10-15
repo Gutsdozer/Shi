@@ -8,7 +8,7 @@ class Homepage:
         self.browser = browser
 
     def open_reg_form(self):
-        regform_button = self.browser.find_element(By.XPATH, '//*[@class = "small button"]').click()
+        regform_button = self.browser.find_element(By.XPATH, '//*[text() = "Регистрация"]').click()
 
     def lang_switch(self):
         lang_button = self.browser.find_element(By.XPATH, '//*[@class = "flag-icon flag-icon-gb"]').click()
