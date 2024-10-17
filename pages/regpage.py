@@ -41,8 +41,8 @@ class Regpage:
         phone_line = self.browser.find_element(By.ID, 'phone')
         phone_line.click()
         phone_line.clear()
-        phone_line.send_keys(generate_phone_number('0532283819'))
-        time.sleep(5)
+        phone_line.send_keys(generate_phone_number('0533333333'))
+        time.sleep(10)
 
 
 
