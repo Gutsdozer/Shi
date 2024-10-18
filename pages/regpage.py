@@ -1,9 +1,14 @@
 import time
+from calendar import calendar
+from fileinput import filename
 
 from conftest import browser
 from selenium.webdriver.common.by import By
 from faker import Faker
 import random
+from loguru import logger
+
+
 
 
 def generate_phone_number(pattern):
@@ -15,6 +20,20 @@ def generate_phone_number(pattern):
             number += char
     return number
 
+def fill_text_line(browser, locator, text):
+    element = browser.find_element(*locator)
+    element.click()
+    element.clear()
+    element.send_keys(text)
+
+def birthdate_select(browser, locator):
+    date = browser.find_element(By.ID, 'birthdate')
+    date.click()
+    
+
+
+    logger.add("test_site.log", rotation="10 MB", retention="1 week")
+
 
 class Regpage:
 
@@ -22,26 +41,14 @@ class Regpage:
         self.browser = browser
 
     def fill_reg_form(self):
-        reg_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
-        assert reg_button is not None
-
+        submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
+        assert submit_button is not None
         fake = Faker()
-        first_name_line = self.browser.find_element(By.XPATH, '//*[@name = "first_name"]')
-        first_name_line.click()
-        first_name_line.clear()
-        first_name_line.send_keys(fake.first_name())
-        last_name_line = self.browser.find_element(By.XPATH, '//*[@name = "last_name"]')
-        last_name_line.click()
-        last_name_line.clear()
-        last_name_line.send_keys(fake.last_name())
-        email_line = self.browser.find_element(By.ID, 'email')
-        email_line.click()
-        email_line.clear()
-        email_line.send_keys(fake.email())
-        phone_line = self.browser.find_element(By.ID, 'phone')
-        phone_line.click()
-        phone_line.clear()
-        phone_line.send_keys(generate_phone_number('0533333333'))
+        fill_text_line(self.browser, (By.XPATH, '//*[@name = "first_name"]'), fake.first_name())
+        logger.info("First name is filled with fake first name")
+        fill_text_line(self.browser, (By.XPATH, '//*[@name = "last_name"]'), fake.last_name())
+        fill_text_line(self.browser, (By.ID, 'email'), fake.email())
+        fill_text_line(self.browser, (By.ID, 'phone'), generate_phone_number('0533333333'))
         time.sleep(10)
 
 
