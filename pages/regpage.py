@@ -1,12 +1,10 @@
 import time
-from calendar import calendar
-from fileinput import filename
-
 from conftest import browser
 from selenium.webdriver.common.by import By
 from faker import Faker
 import random
 from loguru import logger
+from pages import pages_helper
 
 
 
@@ -26,11 +24,6 @@ def fill_text_line(browser, locator, text):
     element.clear()
     element.send_keys(text)
 
-def birthdate_select(browser, locator):
-    date = browser.find_element(By.ID, 'birthdate')
-    date.click()
-    
-
 
     logger.add("test_site.log", rotation="10 MB", retention="1 week")
 
@@ -49,7 +42,8 @@ class Regpage:
         fill_text_line(self.browser, (By.XPATH, '//*[@name = "last_name"]'), fake.last_name())
         fill_text_line(self.browser, (By.ID, 'email'), fake.email())
         fill_text_line(self.browser, (By.ID, 'phone'), generate_phone_number('0533333333'))
-        time.sleep(10)
+        
+
 
 
 
