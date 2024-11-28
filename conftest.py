@@ -1,20 +1,16 @@
 import pytest
 from selenium import webdriver
-import logging
+from loguru import logger
 
-logging.basicConfig(
-    format='%(asctime)s - %(levelname)s - %(message)s',
-    level=logging.INFO,
-    datefmt='%d-%b-%y %H:%M:%S'
-)
+
 
 
 @pytest.fixture()
 def browser():
-    logging.info("Opening Chrome browser")
     browser = webdriver.Chrome()
-    logging.info("Opening Shishi Shabbat site")
+    logger.info("Chrome browser is opened")
     browser.get("https://shishi.co.il/")
+    logger.info("Shishi shabbat site homepage is opened")
     browser.maximize_window()
     browser.implicitly_wait(3)
     yield browser

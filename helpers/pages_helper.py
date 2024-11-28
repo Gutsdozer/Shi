@@ -9,6 +9,7 @@ from selenium.webdriver.support.ui import Select
 from conftest import browser
 
 
+
 def fill_text_line(browser, locator, text):
     element = browser.find_element(*locator)
     element.click()
@@ -37,6 +38,14 @@ def select(browser, locator, visible_text):
     select_element = browser.find_element(*locator)
     select_object = Select(select_element)
     select_object.select_by_visible_text(visible_text)
+
+
+def generate_password():
+    i = random.randint(1, 99)
+    password = "passw" + str(i) + "for12346!"
+    return password
+
+
 
 
 

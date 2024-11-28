@@ -1,1 +1,37 @@
 2024-10-18 16:22:30.618 | INFO     | pages.regpage:fill_reg_form:41 - First name is filled with fake first name
+2024-11-25 19:42:58.289 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 19:43:22.769 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 19:46:53.540 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 19:47:45.080 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 20:47:33.746 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 20:47:40.436 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 20:48:19.044 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 20:48:24.599 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 20:49:00.374 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 20:49:06.726 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 20:50:57.937 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 20:51:06.040 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 20:54:01.239 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 20:54:08.272 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 20:56:16.076 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 20:56:22.484 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 20:57:38.466 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 20:57:43.903 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 21:00:15.977 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 21:00:24.439 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 21:00:41.641 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 21:00:55.759 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 21:02:31.040 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 21:02:35.642 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 21:03:24.380 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 21:03:30.201 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 21:09:08.468 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 21:09:13.819 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-25 21:09:30.265 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-25 21:09:36.842 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-28 19:31:03.833 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-28 19:31:10.569 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-28 19:33:04.291 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-28 19:33:08.870 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2024-11-28 19:34:46.850 | INFO     | conftest:browser:11 - Chrome browser is opened
+2024-11-28 19:35:08.426 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
