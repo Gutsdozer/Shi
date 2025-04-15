@@ -18,11 +18,15 @@ def test_registration(browser):
     regpage = Regpage(browser)
     regpage.fill_reg_form_random_test_data()
 
-# def test_login_parametrize(browser):
-#     homepage = Homepage(browser)
-#     homepage.open_login_form()
-#     loginpage = Loginpage(browser)
-#     loginpage.fill_login_form_parametrize(creds=str)
+def test_login_params(browser, user_credentials):
+    homepage = Homepage(browser)
+    homepage.open_login_form()
+    loginpage = Loginpage(browser)
+    for credentials in user_credentials:
+        loginpage.login(credentials["username"], credentials["password"])
+
+
+
 
 
 
