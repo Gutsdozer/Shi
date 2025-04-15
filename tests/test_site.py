@@ -5,7 +5,12 @@ import pytest
 from pages.login_page import Loginpage
 
 
-
+@pytest.fixture(params=[
+    ("bobby@gmail.com", "password1"),
+    ("freddy@gmail.com", "password2"),
+])
+def user_credentials(request):
+    return request.param
 
 
 def test_regform(browser):
@@ -19,11 +24,11 @@ def test_registration(browser):
     regpage.fill_reg_form_random_test_data()
 
 def test_login_params(browser, user_credentials):
+    username, password = user_credentials
     homepage = Homepage(browser)
     homepage.open_login_form()
     loginpage = Loginpage(browser)
-    for credentials in user_credentials:
-        loginpage.login(credentials["username"], credentials["password"])
+    loginpage.login(username, password)
 
 
 

@@ -16,12 +16,5 @@ def browser():
     yield browser
     #browser.close()
 
-@pytest.fixture(scope="module")
-def user_credentials():
-    return[
-        {"username": "bobby@gmail.com", "password": "password1"},
-        {"username": "freddy@gmail.com", "password": "password2"}
-    ]
-
 
 
