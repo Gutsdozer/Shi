@@ -33,6 +33,20 @@ class Regpage:
         pages_helper.fill_text_line(self.browser, (By.ID, 'password'), generate_password())
         time.sleep(4)
 
+    def fill_reg_form(self):
+        submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
+        assert submit_button.is_displayed()
+        pages_helper.fill_text_line(self.browser, (By.XPATH, '//*[@name = "first_name"]'), "Bobby")
+        pages_helper.fill_text_line(self.browser, (By.XPATH, '//*[@name = "last_name"]'), "Bobson")
+        pages_helper.fill_text_line(self.browser, (By.ID, 'teuda'), pages_helper.generate_number('333333333'))
+        pages_helper.select(self.browser, (By.NAME, 'sex'), 'Мужской')
+        pages_helper.fill_text_line(self.browser, (By.ID, 'email'), "bobby@gmail.com")
+        pages_helper.fill_text_line(self.browser, (By.ID, 'phone'), pages_helper.generate_number('0533333333'))
+
+
+
+
+
 
 
 
