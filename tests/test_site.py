@@ -23,12 +23,11 @@ def test_registration(browser):
     regpage = Regpage(browser)
     regpage.fill_reg_form_random_test_data()
 
-def test_login_params(browser, user_credentials):
-    username, password = user_credentials
+def test_registration_login_logout(browser):
     homepage = Homepage(browser)
-    homepage.open_login_form()
-    loginpage = Loginpage(browser)
-    loginpage.login(username, password)
+    homepage.open_reg_form()
+    regpage = Regpage(browser)
+    regpage.register_login_logout()
 
 
 

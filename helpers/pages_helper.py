@@ -45,6 +45,11 @@ def generate_password():
     password = "passw" + str(i) + "for12346!"
     return password
 
+def generate_email():
+    fake = Faker()
+    generated_email = fake.email()
+    return generated_email
+
 
 
 
