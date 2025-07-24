@@ -1,6 +1,7 @@
 import time
 
 import pytest
+from selenium.common import TimeoutException
 
 from conftest import browser
 from selenium.webdriver.common.by import By
@@ -8,6 +9,9 @@ from faker import Faker
 from loguru import logger
 from helpers import pages_helper
 from helpers.pages_helper import generate_password
+from selenium.webdriver.common.action_chains import ActionChains
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 logger.add("test_site.log", rotation="10 MB", retention="1 week")
 
@@ -34,6 +38,7 @@ class Regpage:
         time.sleep(4)
 
     def register_login_logout(self):
+        global profile_button
         submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
         assert submit_button.is_displayed()
         pages_helper.fill_text_line(self.browser, (By.XPATH, '//*[@name = "first_name"]'), "Bobby")
@@ -56,6 +61,20 @@ class Regpage:
         login_password.send_keys('password2')
         submit_login = self.browser.find_element(By.XPATH, '//*[@id="content"]/div[2]/div/div/div/div[2]/div/form/p[4]/input')
         submit_login.click()
+        try:
+            profile_button = (WebDriverWait(self.browser, 3).until
+                              (EC.presence_of_element_located((By.XPATH, '//*[@id="topmenu"]/div/div/div[2]/ul/li[5]/a'))))
+        except TimeoutException:
+            print("Element did not appear")
+        exit_button = self.browser.find_element(By.XPATH, '//*[@id="topmenu"]/div/div/div[2]/ul/li[5]/ul/li[3]/a')
+        action = ActionChains(self.browser)
+        action.move_to_element(profile_button).move_to_element(exit_button).click().perform()
+        exit_sign = self.browser.find_element(By.XPATH, '//*[@id="infoMessage"]/p')
+        assert "Выход успешный" in exit_sign.text
+
+
+
+
 
 
 
