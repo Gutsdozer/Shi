@@ -73,6 +73,11 @@ class Regpage:
         exit_sign = self.browser.find_element(By.XPATH, '//*[@id="infoMessage"]/p')
         assert "Выход успешный" in exit_sign.text
 
+    def register_user_obj(self, user_obj):
+        submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
+        assert submit_button.is_displayed()
+        pages_helper.fill_text_line(self.browser, (By.XPATH, '//*[@name = "first_name"]'), user_obj.name)
+
 
 
 
