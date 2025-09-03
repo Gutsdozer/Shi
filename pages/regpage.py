@@ -12,6 +12,7 @@ from helpers.pages_helper import generate_password
 from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+from classes.classes import User
 
 logger.add("test_site.log", rotation="10 MB", retention="1 week")
 
@@ -41,7 +42,7 @@ class Regpage:
         global profile_button
         submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
         assert submit_button.is_displayed()
-        pages_helper.fill_text_line(self.browser, (By.XPATH, '//*[@name = "first_name"]'), "Bobby")
+        pages_helper.fill_text_line(self.browser, (By.XPATH, '//*[@name = "first_name"]'), 'Bobby')
         pages_helper.fill_text_line(self.browser, (By.XPATH, '//*[@name = "last_name"]'), "Bobson")
         pages_helper.fill_text_line(self.browser, (By.ID, 'teuda'), pages_helper.generate_number('333333333'))
         pages_helper.select(self.browser, (By.NAME, 'sex'), 'Мужской')
