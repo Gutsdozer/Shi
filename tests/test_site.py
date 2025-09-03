@@ -1,8 +1,10 @@
+from classes.classes import users_to_register
 from pages.homepage import Homepage
 from pages.regpage import Regpage
 from conftest import browser
 import pytest
 from pages.login_page import Loginpage
+from classes import classes
 
 
 @pytest.fixture(params=[
@@ -29,6 +31,8 @@ def test_registration_login_logout(browser):
     regpage = Regpage(browser)
     regpage.register_login_logout()
 
+    for user_data in users_to_register:
+        regpage.register_user_obj(user_data)
 
 
 
