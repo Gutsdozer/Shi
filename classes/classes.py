@@ -14,7 +14,6 @@ class User:
         self.aliah_date = aliah_date
         self.password = password
 
-faker = Faker()
 users_to_register = [User("Bobbins", "Hryapson", pages_helper.generate_number(333333333),
                           pages_helper.generate_email(), pages_helper.generate_number(1513333333),
                           pages_helper.generate_random_date(),

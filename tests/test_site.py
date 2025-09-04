@@ -4,7 +4,7 @@ from pages.regpage import Regpage
 from conftest import browser
 import pytest
 from pages.login_page import Loginpage
-from classes import classes
+
 
 
 @pytest.fixture(params=[

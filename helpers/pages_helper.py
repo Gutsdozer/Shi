@@ -22,6 +22,8 @@ def generate_number(pattern):
     for char in pattern:
         if char == '3':
             number += str(random.randint(0, 9))
+        elif number == '1':
+            number += str('0')
         else:
             number += char
     return number
