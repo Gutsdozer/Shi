@@ -1,4 +1,4 @@
-from classes.classes import users_to_register
+from objects.user import users_to_register
 from pages.homepage import Homepage
 from pages.regpage import Regpage
 from conftest import browser
@@ -31,6 +31,10 @@ def test_registration_login_logout(browser):
     regpage = Regpage(browser)
     regpage.register_login_logout()
 
+def test_registration_user_object(browser):
+    homepage = Homepage(browser)
+    homepage.open_reg_form()
+    regpage = Regpage(browser)
     for user_data in users_to_register:
         regpage.register_user_obj(user_data)
 
