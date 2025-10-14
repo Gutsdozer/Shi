@@ -14,11 +14,14 @@ class User:
         self.aliah_date = aliah_date
         self.password = password
 
+    def __repr__(self):
+        return f"{self.name} {self.second_name}, email '{self.email}'"
+
 users_to_register = [User("Bobbins", "Hryapson", pages_helper.generate_number("333333333"),
                           pages_helper.generate_email(), pages_helper.generate_number("1513333333"),
                           pages_helper.generate_random_date(),
-                          '2022', "password1"), User("Lopuh", "Dobkins",
+                          '2022', "password1234"), User("Lopuh", "Dobkins",
                                                      pages_helper.generate_number("333333333"),
                           pages_helper.generate_email(), pages_helper.generate_number("1513333333"),
                           pages_helper.generate_random_date(),
-                          '2024', "password2")]
+                          '2024', "password5678")]

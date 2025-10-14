@@ -1,97 +1,11 @@
-2024-10-18 16:22:30.618 | INFO     | pages.regpage:fill_reg_form:41 - First name is filled with fake first name
-2024-11-25 19:42:58.289 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 19:43:22.769 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 19:46:53.540 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 19:47:45.080 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 20:47:33.746 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 20:47:40.436 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 20:48:19.044 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 20:48:24.599 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 20:49:00.374 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 20:49:06.726 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 20:50:57.937 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 20:51:06.040 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 20:54:01.239 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 20:54:08.272 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 20:56:16.076 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 20:56:22.484 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 20:57:38.466 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 20:57:43.903 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 21:00:15.977 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 21:00:24.439 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 21:00:41.641 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 21:00:55.759 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 21:02:31.040 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 21:02:35.642 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 21:03:24.380 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 21:03:30.201 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 21:09:08.468 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 21:09:13.819 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-25 21:09:30.265 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-25 21:09:36.842 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-28 19:31:03.833 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-28 19:31:10.569 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-28 19:33:04.291 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-28 19:33:08.870 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2024-11-28 19:34:46.850 | INFO     | conftest:browser:11 - Chrome browser is opened
-2024-11-28 19:35:08.426 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-02 19:25:55.777 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-02 19:26:02.025 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 18:48:19.144 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 18:48:25.116 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 18:49:43.895 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 18:49:49.298 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 18:50:41.958 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 18:50:51.908 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 18:53:22.585 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 18:53:27.421 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 18:57:49.602 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 18:57:59.144 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 18:59:22.646 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 18:59:33.420 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 19:05:23.851 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 19:05:32.171 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 20:09:06.594 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 20:09:07.531 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 20:12:33.241 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 20:12:41.435 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 20:41:13.450 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 20:41:21.184 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 20:55:25.894 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 20:55:33.878 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 21:02:03.029 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 21:02:10.921 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 21:02:39.445 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 21:02:46.223 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 21:13:41.981 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 21:13:49.013 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 21:16:34.221 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 21:16:35.206 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-04-15 21:16:51.542 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-04-15 21:17:03.768 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-23 19:45:05.611 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-23 19:45:09.366 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-23 19:52:18.203 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-23 19:52:22.337 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-23 19:55:28.128 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-23 19:55:32.174 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-23 20:00:11.512 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-23 20:00:17.293 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-23 20:04:25.496 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-23 20:04:32.033 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-23 20:05:31.039 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-23 20:05:34.281 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-23 20:07:25.606 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-23 20:07:28.912 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-24 19:40:13.341 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-24 19:40:19.358 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-24 19:42:25.833 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-24 19:42:28.913 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-24 19:47:57.554 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-24 19:48:06.096 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-24 19:50:08.685 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-24 19:50:14.103 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-24 19:51:07.493 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-24 19:51:10.167 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
-2025-07-24 19:52:02.509 | INFO     | conftest:browser:11 - Chrome browser is opened
-2025-07-24 19:52:06.004 | INFO     | conftest:browser:13 - Shishi shabbat site homepage is opened
+2025-10-14 20:10:54.472 | INFO     | conftest:browser:13 - Chrome browser is opened
+2025-10-14 20:10:58.718 | INFO     | conftest:browser:15 - Shishi shabbat site homepage is opened
+2025-10-14 20:11:00.045 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
+2025-10-14 20:11:00.786 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
+2025-10-14 20:11:00.826 | INFO     | pages.regpage:register_user_obj:78 - Filling registration fields with Bobbins Hryapson with email 'lhumphrey@example.net' data
+2025-10-14 20:11:02.600 | INFO     | pages.regpage:register_user_obj:89 - All necessary fields are filled with Bobbins Hryapson with email 'lhumphrey@example.net' data
+2025-10-14 20:11:03.783 | INFO     | pages.regpage:register_user_obj:97 - Filling login fields with Bobbins Hryapson with email 'lhumphrey@example.net' data
+2025-10-14 20:11:07.326 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
+2025-10-14 20:11:07.343 | INFO     | pages.regpage:register_user_obj:78 - Filling registration fields with Lopuh Dobkins with email 'steven43@example.com' data
+2025-10-14 20:11:09.453 | INFO     | pages.regpage:register_user_obj:89 - All necessary fields are filled with Lopuh Dobkins with email 'steven43@example.com' data
+2025-10-14 20:11:10.553 | INFO     | pages.regpage:register_user_obj:97 - Filling login fields with Lopuh Dobkins with email 'steven43@example.com' data

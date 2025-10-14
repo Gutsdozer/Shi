@@ -1,5 +1,6 @@
 from conftest import browser
 from selenium.webdriver.common.by import By
+from helpers.logger import log
 
 
 class Homepage:
@@ -8,10 +9,14 @@ class Homepage:
         self.browser = browser
 
     def open_reg_form(self):
-        regform_button = self.browser.find_element(By.XPATH, '//*[text() = "Регистрация"]').click()
+        self.browser.find_element(By.XPATH, '//*[text() = "Регистрация"]').click()
+        log.info("Registration page is opened")
+
 
     def open_login_form(self):
-        login_button = self.browser.find_element(By.XPATH, '//*[text() = "Вход"]').click()
+        self.browser.find_element(By.XPATH, '//*[text() = "Вход"]').click()
+        log.info("Login page is opened")
+
 
     def lang_switch(self):
-        lang_button = self.browser.find_element(By.XPATH, '//*[@class = "flag-icon flag-icon-gb"]').click()
+        self.browser.find_element(By.XPATH, '//*[@class = "flag-icon flag-icon-gb"]').click()

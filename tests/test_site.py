@@ -36,6 +36,7 @@ def test_registration_user_object(browser):
     homepage.open_reg_form()
     regpage = Regpage(browser)
     for user_data in users_to_register:
+        homepage.open_reg_form()
         regpage.register_user_obj(user_data)
 
 
