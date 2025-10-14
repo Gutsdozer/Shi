@@ -110,7 +110,11 @@ class Regpage:
         exit_button = self.browser.find_element(By.XPATH, '//*[@id="topmenu"]/div/div/div[2]/ul/li[5]/ul/li[3]/a')
         action = ActionChains(self.browser)
         action.move_to_element(profile_button).move_to_element(exit_button).click().perform()
-        exit_sign = self.browser.find_element(By.XPATH, '//*[@id="infoMessage"]/p')
+        try:
+            exit_sign = (WebDriverWait(self.browser, 3)
+                     .until(presence_of_element_located((By.XPATH, '//*[@id="infoMessage"]/p'))))
+        except TimeoutException:
+            log.error(f"Element {exit_sign} was not found")
         assert "Выход успешный" in exit_sign.text
 
 
