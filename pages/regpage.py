@@ -106,7 +106,7 @@ class Regpage:
                               (EC.presence_of_element_located(
                                   (By.XPATH, '//*[@id="topmenu"]/div/div/div[2]/ul/li[5]/a'))))
         except TimeoutException:
-            print("Element did not appear")
+            log.error(f"Element {profile_button} was not found")
         exit_button = self.browser.find_element(By.XPATH, '//*[@id="topmenu"]/div/div/div[2]/ul/li[5]/ul/li[3]/a')
         action = ActionChains(self.browser)
         action.move_to_element(profile_button).move_to_element(exit_button).click().perform()
