@@ -16,6 +16,7 @@ def loguru_setup():
     logger.add(
         LOG_FILE_PATH,
         level='INFO',
+        retention='1 week',
         encoding='utf-8'
     )
 loguru_setup()

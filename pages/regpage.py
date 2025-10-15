@@ -75,7 +75,8 @@ class Regpage:
     def register_user_obj(self, user_obj):
         submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
         assert submit_button.is_displayed()
-        log.info(f"Filling registration fields with {user_obj} data")
+        log.info(f"Filling registration fields with User test data")
+        #new user registration starts here
         pages_helper.fill_text_line(self.browser, (By.NAME, 'first_name'), user_obj.name)
         pages_helper.fill_text_line(self.browser, (By.XPATH, '//*[@name = "last_name"]'), user_obj.second_name)
         pages_helper.fill_text_line(self.browser, (By.ID, 'teuda'), user_obj.teuda)
@@ -90,11 +91,12 @@ class Regpage:
         submit_button.click()
         try:
             info_message = (WebDriverWait(self.browser, 3)
-                   .until(presence_of_element_located((By.ID, 'infoMessage'))))
+                   .until(EC.presence_of_element_located((By.ID, 'infoMessage'))))
         except TimeoutException:
             log.error(f"Element {info_message} was not found")
         assert "Учетная запись успешно создана" in info_message.text
-        log.info(f"Filling login fields with {user_obj} data")
+        log.info(f"Filling login fields with User test data")
+        #logging in starts here
         login_email = self.browser.find_element(By.NAME, 'identity')
         login_email.send_keys(user_obj.email)
         login_password = self.browser.find_element(By.NAME, 'password')
@@ -112,7 +114,7 @@ class Regpage:
         action.move_to_element(profile_button).move_to_element(exit_button).click().perform()
         try:
             exit_sign = (WebDriverWait(self.browser, 3)
-                     .until(presence_of_element_located((By.XPATH, '//*[@id="infoMessage"]/p'))))
+                     .until(EC.presence_of_element_located((By.XPATH, '//*[@id="infoMessage"]/p'))))
         except TimeoutException:
             log.error(f"Element {exit_sign} was not found")
         assert "Выход успешный" in exit_sign.text

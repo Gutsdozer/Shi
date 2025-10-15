@@ -1,11 +1,11 @@
-2025-10-14 20:10:54.472 | INFO     | conftest:browser:13 - Chrome browser is opened
-2025-10-14 20:10:58.718 | INFO     | conftest:browser:15 - Shishi shabbat site homepage is opened
-2025-10-14 20:11:00.045 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
-2025-10-14 20:11:00.786 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
-2025-10-14 20:11:00.826 | INFO     | pages.regpage:register_user_obj:78 - Filling registration fields with Bobbins Hryapson with email 'lhumphrey@example.net' data
-2025-10-14 20:11:02.600 | INFO     | pages.regpage:register_user_obj:89 - All necessary fields are filled with Bobbins Hryapson with email 'lhumphrey@example.net' data
-2025-10-14 20:11:03.783 | INFO     | pages.regpage:register_user_obj:97 - Filling login fields with Bobbins Hryapson with email 'lhumphrey@example.net' data
-2025-10-14 20:11:07.326 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
-2025-10-14 20:11:07.343 | INFO     | pages.regpage:register_user_obj:78 - Filling registration fields with Lopuh Dobkins with email 'steven43@example.com' data
-2025-10-14 20:11:09.453 | INFO     | pages.regpage:register_user_obj:89 - All necessary fields are filled with Lopuh Dobkins with email 'steven43@example.com' data
-2025-10-14 20:11:10.553 | INFO     | pages.regpage:register_user_obj:97 - Filling login fields with Lopuh Dobkins with email 'steven43@example.com' data
+2025-10-14 20:19:57.130 | INFO     | conftest:browser:13 - Chrome browser is opened
+2025-10-14 20:20:01.724 | INFO     | conftest:browser:15 - Shishi shabbat site homepage is opened
+2025-10-14 20:20:02.773 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
+2025-10-14 20:20:03.510 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
+2025-10-14 20:20:03.545 | INFO     | pages.regpage:register_user_obj:78 - Filling registration fields with Bobbins Hryapson, email 'tara03@example.com' data
+2025-10-14 20:20:05.355 | INFO     | pages.regpage:register_user_obj:89 - All necessary fields are filled with Bobbins Hryapson, email 'tara03@example.com' data
+2025-10-14 20:20:06.781 | INFO     | pages.regpage:register_user_obj:97 - Filling login fields with Bobbins Hryapson, email 'tara03@example.com' data
+2025-10-14 20:20:10.338 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
+2025-10-14 20:20:10.384 | INFO     | pages.regpage:register_user_obj:78 - Filling registration fields with Lopuh Dobkins, email 'shawnbradford@example.com' data
+2025-10-14 20:20:12.357 | INFO     | pages.regpage:register_user_obj:89 - All necessary fields are filled with Lopuh Dobkins, email 'shawnbradford@example.com' data
+2025-10-14 20:20:13.506 | INFO     | pages.regpage:register_user_obj:97 - Filling login fields with Lopuh Dobkins, email 'shawnbradford@example.com' data

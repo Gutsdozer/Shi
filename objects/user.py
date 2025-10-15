@@ -15,7 +15,7 @@ class User:
         self.password = password
 
     def __repr__(self):
-        return f"{self.name} {self.second_name}, email '{self.email}'"
+        return f"{self.name} {self.second_name}, '{self.email}'"
 
 users_to_register = [User("Bobbins", "Hryapson", pages_helper.generate_number("333333333"),
                           pages_helper.generate_email(), pages_helper.generate_number("1513333333"),
