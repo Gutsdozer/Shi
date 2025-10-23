@@ -7,6 +7,8 @@ from selenium.webdriver.support.expected_conditions import presence_of_element_l
 from conftest import browser
 from selenium.webdriver.common.by import By
 from faker import Faker
+
+from helpers.locators import RegpageLocators, LoginpageLocators, ProfilePageLocators
 from helpers.logger import log
 from helpers import pages_helper
 from helpers.pages_helper import generate_password
@@ -72,23 +74,23 @@ class Regpage:
         exit_sign = self.browser.find_element(By.XPATH, '//*[@id="infoMessage"]/p')
         assert "Выход успешный" in exit_sign.text
 
-
+    #this is the main registration testing method
     def register_user_obj(self, user_obj):
         submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
         assert submit_button.is_displayed()
         log.info(f"Filling registration fields with User test data")
         #new user registration starts here
         #using User class objects
-        pages_helper.fill_text_line(self.browser, (By.NAME, 'first_name'), user_obj.name)
-        pages_helper.fill_text_line(self.browser, (By.XPATH, '//*[@name = "last_name"]'), user_obj.second_name)
-        pages_helper.fill_text_line(self.browser, (By.ID, 'teuda'), user_obj.teuda)
-        pages_helper.select(self.browser, (By.NAME, 'sex'), 'Мужской')
-        pages_helper.fill_text_line(self.browser, (By.ID, 'email'), user_obj.email)
-        pages_helper.fill_text_line(self.browser, (By.ID, 'phone'), '0533333333')
-        pages_helper.fill_text_line(self.browser, (By.ID, 'birthdate'), user_obj.birth_date)
-        pages_helper.fill_text_line(self.browser, (By.ID, 'aliya_year'), user_obj.aliah_date)
-        pages_helper.fill_text_line(self.browser, (By.ID, 'password'), user_obj.password)
-        pages_helper.fill_text_line(self.browser, (By.NAME, 'password_confirm'), user_obj.password)
+        pages_helper.fill_text_line(self.browser, RegpageLocators.FIRST_NAME, user_obj.name)
+        pages_helper.fill_text_line(self.browser, RegpageLocators.LAST_NAME, user_obj.second_name)
+        pages_helper.fill_text_line(self.browser, RegpageLocators.TEUDA, user_obj.teuda)
+        pages_helper.select(self.browser, RegpageLocators.SEX, 'Мужской')
+        pages_helper.fill_text_line(self.browser, RegpageLocators.EMAIL, user_obj.email)
+        pages_helper.fill_text_line(self.browser, RegpageLocators.PHONE, '0533333333')
+        pages_helper.fill_text_line(self.browser, RegpageLocators.BIRTHDATE, user_obj.birth_date)
+        pages_helper.fill_text_line(self.browser, RegpageLocators.ALIYA_YEAR, user_obj.aliah_date)
+        pages_helper.fill_text_line(self.browser, RegpageLocators.PASSWORD, user_obj.password)
+        pages_helper.fill_text_line(self.browser, RegpageLocators.PASSWORD_CONFIRM, user_obj.password)
         log.info(f"All necessary fields are filled with {user_obj} data, moving for log in")
         submit_button.click()
         try:
@@ -100,11 +102,11 @@ class Regpage:
         log.info(f"New profile of {user_obj} successfully created")
         log.info(f"Filling login fields with User test data")
         #logging in starts here
-        login_email = self.browser.find_element(By.NAME, 'identity')
+        login_email = self.browser.find_element(*LoginpageLocators.LOGIN_EMAIL)
         login_email.send_keys(user_obj.email)
-        login_password = self.browser.find_element(By.NAME, 'password')
+        login_password = self.browser.find_element(*LoginpageLocators.PASSWORD)
         login_password.send_keys(user_obj.password)
-        submit_login = self.browser.find_element(By.NAME, 'submit')
+        submit_login = self.browser.find_element(*LoginpageLocators.SUBMIT_BUTTON)
         submit_login.click()
         log.info(f"Entered {user_obj} profile")
         #possibility of alert
@@ -118,8 +120,7 @@ class Regpage:
 
         try:
             profile_button = (WebDriverWait(self.browser, 3).until
-                              (EC.presence_of_element_located(
-                                  (By.XPATH, '//*[@id="topmenu"]/div/div/div[2]/ul/li[5]/a'))))
+                              (EC.presence_of_element_located(ProfilePageLocators.PROFILE_BUTTON)))
         except TimeoutException:
             log.error(f"Element {profile_button} was not found")
         exit_button = self.browser.find_element(By.XPATH, '//*[@id="topmenu"]/div/div/div[2]/ul/li[5]/ul/li[3]/a')
@@ -127,7 +128,7 @@ class Regpage:
         action.move_to_element(profile_button).move_to_element(exit_button).click().perform()
         try:
             exit_sign = (WebDriverWait(self.browser, 3)
-                     .until(EC.presence_of_element_located((By.XPATH, '//*[@id="infoMessage"]/p'))))
+                     .until(EC.presence_of_element_located(ProfilePageLocators.EXIT_BUTTON)))
         except TimeoutException:
             log.error(f"Element {exit_sign} was not found")
         assert "Выход успешный" in exit_sign.text
