@@ -19,4 +19,5 @@ class LoginpageLocators:
 
 class ProfilePageLocators:
     PROFILE_BUTTON = (By.XPATH, '//*[@id="topmenu"]/div/div/div[2]/ul/li[5]/a')
-    EXIT_BUTTON = (By.XPATH, '//*[@id="infoMessage"]/p')
+    EXIT_BUTTON = (By.XPATH, '//*[@id="topmenu"]/div/div/div[2]/ul/li[5]/ul/li[3]/a')
+    EXIT_SIGN = (By.XPATH, '//*[@id="infoMessage"]/p')

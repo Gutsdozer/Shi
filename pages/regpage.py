@@ -74,7 +74,7 @@ class Regpage:
         exit_sign = self.browser.find_element(By.XPATH, '//*[@id="infoMessage"]/p')
         assert "Выход успешный" in exit_sign.text
 
-    #this is the main registration testing method
+
     def register_user_obj(self, user_obj):
         submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
         assert submit_button.is_displayed()
@@ -123,12 +123,12 @@ class Regpage:
                               (EC.presence_of_element_located(ProfilePageLocators.PROFILE_BUTTON)))
         except TimeoutException:
             log.error(f"Element {profile_button} was not found")
-        exit_button = self.browser.find_element(By.XPATH, '//*[@id="topmenu"]/div/div/div[2]/ul/li[5]/ul/li[3]/a')
+        exit_button = self.browser.find_element(*ProfilePageLocators.EXIT_BUTTON)
         action = ActionChains(self.browser)
         action.move_to_element(profile_button).move_to_element(exit_button).click().perform()
         try:
             exit_sign = (WebDriverWait(self.browser, 3)
-                     .until(EC.presence_of_element_located(ProfilePageLocators.EXIT_BUTTON)))
+                     .until(EC.presence_of_element_located(ProfilePageLocators.EXIT_SIGN)))
         except TimeoutException:
             log.error(f"Element {exit_sign} was not found")
         assert "Выход успешный" in exit_sign.text
