@@ -1,7 +1,7 @@
 import time
 
 import pytest
-from selenium.common import TimeoutException
+from selenium.common.exceptions import TimeoutException, NoAlertPresentException
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 
 from conftest import browser
@@ -72,11 +72,13 @@ class Regpage:
         exit_sign = self.browser.find_element(By.XPATH, '//*[@id="infoMessage"]/p')
         assert "Выход успешный" in exit_sign.text
 
+
     def register_user_obj(self, user_obj):
         submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
         assert submit_button.is_displayed()
         log.info(f"Filling registration fields with User test data")
         #new user registration starts here
+        #using User class objects
         pages_helper.fill_text_line(self.browser, (By.NAME, 'first_name'), user_obj.name)
         pages_helper.fill_text_line(self.browser, (By.XPATH, '//*[@name = "last_name"]'), user_obj.second_name)
         pages_helper.fill_text_line(self.browser, (By.ID, 'teuda'), user_obj.teuda)
@@ -91,7 +93,7 @@ class Regpage:
         submit_button.click()
         try:
             info_message = (WebDriverWait(self.browser, 3)
-                   .until(EC.presence_of_element_located((By.ID, 'infoMessage'))))
+                            .until(EC.presence_of_element_located((By.ID, 'infoMessage'))))
         except TimeoutException:
             log.error(f"Element {info_message} was not found")
         assert "Учетная запись успешно создана" in info_message.text
@@ -103,6 +105,14 @@ class Regpage:
         login_password.send_keys(user_obj.password)
         submit_login = self.browser.find_element(By.NAME, 'submit')
         submit_login.click()
+        #possibility of alert
+        try:
+            alert = WebDriverWait(self.browser, 3).until(EC.alert_is_present())
+            alert_text = alert.text
+            log.info(f"Alert with text {alert_text} has appeared, accepting")
+        except TimeoutException:
+            log.info(f"Password warning alert did not appear, continuing script")
+
         try:
             profile_button = (WebDriverWait(self.browser, 3).until
                               (EC.presence_of_element_located(

@@ -1,11 +1,13 @@
-2025-10-14 20:19:57.130 | INFO     | conftest:browser:13 - Chrome browser is opened
-2025-10-14 20:20:01.724 | INFO     | conftest:browser:15 - Shishi shabbat site homepage is opened
-2025-10-14 20:20:02.773 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
-2025-10-14 20:20:03.510 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
-2025-10-14 20:20:03.545 | INFO     | pages.regpage:register_user_obj:78 - Filling registration fields with Bobbins Hryapson, email 'tara03@example.com' data
-2025-10-14 20:20:05.355 | INFO     | pages.regpage:register_user_obj:89 - All necessary fields are filled with Bobbins Hryapson, email 'tara03@example.com' data
-2025-10-14 20:20:06.781 | INFO     | pages.regpage:register_user_obj:97 - Filling login fields with Bobbins Hryapson, email 'tara03@example.com' data
-2025-10-14 20:20:10.338 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
-2025-10-14 20:20:10.384 | INFO     | pages.regpage:register_user_obj:78 - Filling registration fields with Lopuh Dobkins, email 'shawnbradford@example.com' data
-2025-10-14 20:20:12.357 | INFO     | pages.regpage:register_user_obj:89 - All necessary fields are filled with Lopuh Dobkins, email 'shawnbradford@example.com' data
-2025-10-14 20:20:13.506 | INFO     | pages.regpage:register_user_obj:97 - Filling login fields with Lopuh Dobkins, email 'shawnbradford@example.com' data
+2025-10-23 20:43:33.163 | INFO     | conftest:browser:13 - Chrome browser is opened
+2025-10-23 20:43:38.679 | INFO     | conftest:browser:15 - Shishi shabbat site homepage is opened
+2025-10-23 20:43:39.666 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
+2025-10-23 20:43:40.337 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
+2025-10-23 20:43:40.374 | INFO     | pages.regpage:register_user_obj:79 - Filling registration fields with User test data
+2025-10-23 20:43:42.188 | INFO     | pages.regpage:register_user_obj:92 - All necessary fields are filled with Bobbins Hryapson, 'yhernandez@example.com' data
+2025-10-23 20:43:43.310 | INFO     | pages.regpage:register_user_obj:100 - Filling login fields with User test data
+2025-10-23 20:43:47.660 | INFO     | pages.regpage:register_user_obj:114 - Password warning alert did not appear, continuing script
+2025-10-23 20:43:50.147 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
+2025-10-23 20:43:50.171 | INFO     | pages.regpage:register_user_obj:79 - Filling registration fields with User test data
+2025-10-23 20:43:52.753 | INFO     | pages.regpage:register_user_obj:92 - All necessary fields are filled with Lopuh Dobkins, 'briannasmall@example.org' data
+2025-10-23 20:43:53.821 | INFO     | pages.regpage:register_user_obj:100 - Filling login fields with User test data
+2025-10-23 20:43:58.169 | INFO     | pages.regpage:register_user_obj:114 - Password warning alert did not appear, continuing script
