@@ -98,6 +98,7 @@ class Regpage:
                             .until(EC.presence_of_element_located((By.ID, 'infoMessage'))))
         except TimeoutException:
             log.error(f"Element {info_message} was not found")
+            raise
         assert "Учетная запись успешно создана" in info_message.text
         log.info(f"New profile of {user_obj} successfully created")
         log.info(f"Filling login fields with User test data")
@@ -123,6 +124,7 @@ class Regpage:
                               (EC.presence_of_element_located(ProfilePageLocators.PROFILE_BUTTON)))
         except TimeoutException:
             log.error(f"Element {profile_button} was not found")
+            raise
         exit_button = self.browser.find_element(*ProfilePageLocators.EXIT_BUTTON)
         action = ActionChains(self.browser)
         action.move_to_element(profile_button).move_to_element(exit_button).click().perform()
@@ -131,6 +133,7 @@ class Regpage:
                      .until(EC.presence_of_element_located(ProfilePageLocators.EXIT_SIGN)))
         except TimeoutException:
             log.error(f"Element {exit_sign} was not found")
+            raise
         assert "Выход успешный" in exit_sign.text
         log.info(f"Performed an exit from {user_obj} profile")
 
