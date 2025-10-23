@@ -112,6 +112,7 @@ class Regpage:
             alert = WebDriverWait(self.browser, 3).until(EC.alert_is_present())
             alert_text = alert.text
             log.info(f"Alert with text {alert_text} has appeared, accepting")
+            alert.accept()
         except TimeoutException:
             log.info(f"Password warning alert did not appear, continuing script")
 
