@@ -89,7 +89,7 @@ class Regpage:
         pages_helper.fill_text_line(self.browser, (By.ID, 'aliya_year'), user_obj.aliah_date)
         pages_helper.fill_text_line(self.browser, (By.ID, 'password'), user_obj.password)
         pages_helper.fill_text_line(self.browser, (By.NAME, 'password_confirm'), user_obj.password)
-        log.info(f"All necessary fields are filled with {user_obj} data")
+        log.info(f"All necessary fields are filled with {user_obj} data, moving for log in")
         submit_button.click()
         try:
             info_message = (WebDriverWait(self.browser, 3)
@@ -97,6 +97,7 @@ class Regpage:
         except TimeoutException:
             log.error(f"Element {info_message} was not found")
         assert "Учетная запись успешно создана" in info_message.text
+        log.info(f"New profile of {user_obj} successfully created")
         log.info(f"Filling login fields with User test data")
         #logging in starts here
         login_email = self.browser.find_element(By.NAME, 'identity')
@@ -105,6 +106,7 @@ class Regpage:
         login_password.send_keys(user_obj.password)
         submit_login = self.browser.find_element(By.NAME, 'submit')
         submit_login.click()
+        log.info(f"Entered {user_obj} profile")
         #possibility of alert
         try:
             alert = WebDriverWait(self.browser, 3).until(EC.alert_is_present())
@@ -128,6 +130,7 @@ class Regpage:
         except TimeoutException:
             log.error(f"Element {exit_sign} was not found")
         assert "Выход успешный" in exit_sign.text
+        log.info(f"Performed an exit from {user_obj} profile")
 
 
 
