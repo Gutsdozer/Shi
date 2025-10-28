@@ -1,19 +1,19 @@
-2025-10-23 21:52:57.239 | INFO     | conftest:browser:13 - Chrome browser is opened
-2025-10-23 21:53:00.565 | INFO     | conftest:browser:15 - Shishi shabbat site homepage is opened
-2025-10-23 21:53:01.544 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
-2025-10-23 21:53:02.544 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
-2025-10-23 21:53:02.590 | INFO     | pages.regpage:register_user_obj:81 - Filling registration fields with User test data
-2025-10-23 21:53:04.371 | INFO     | pages.regpage:register_user_obj:94 - All necessary fields are filled with Bobbins Hryapson, 'rachel78@example.org' data, moving for log in
-2025-10-23 21:53:05.495 | INFO     | pages.regpage:register_user_obj:103 - New profile of Bobbins Hryapson, 'rachel78@example.org' successfully created
-2025-10-23 21:53:05.495 | INFO     | pages.regpage:register_user_obj:104 - Filling login fields with User test data
-2025-10-23 21:53:06.779 | INFO     | pages.regpage:register_user_obj:112 - Entered Bobbins Hryapson, 'rachel78@example.org' profile
-2025-10-23 21:53:09.811 | INFO     | pages.regpage:register_user_obj:120 - Password warning alert did not appear, continuing script
-2025-10-23 21:53:11.257 | INFO     | pages.regpage:register_user_obj:138 - Performed an exit from Bobbins Hryapson, 'rachel78@example.org' profile
-2025-10-23 21:53:12.089 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
-2025-10-23 21:53:12.118 | INFO     | pages.regpage:register_user_obj:81 - Filling registration fields with User test data
-2025-10-23 21:53:15.103 | INFO     | pages.regpage:register_user_obj:94 - All necessary fields are filled with Lopuh Dobkins, 'xharris@example.org' data, moving for log in
-2025-10-23 21:53:16.163 | INFO     | pages.regpage:register_user_obj:103 - New profile of Lopuh Dobkins, 'xharris@example.org' successfully created
-2025-10-23 21:53:16.163 | INFO     | pages.regpage:register_user_obj:104 - Filling login fields with User test data
-2025-10-23 21:53:17.454 | INFO     | pages.regpage:register_user_obj:112 - Entered Lopuh Dobkins, 'xharris@example.org' profile
-2025-10-23 21:53:20.495 | INFO     | pages.regpage:register_user_obj:120 - Password warning alert did not appear, continuing script
-2025-10-23 21:53:21.958 | INFO     | pages.regpage:register_user_obj:138 - Performed an exit from Lopuh Dobkins, 'xharris@example.org' profile
+2025-10-28 20:21:43.759 | INFO     | conftest:browser:13 - Chrome browser is opened
+2025-10-28 20:21:47.253 | INFO     | conftest:browser:15 - Shishi shabbat site homepage is opened
+2025-10-28 20:21:48.442 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
+2025-10-28 20:21:49.582 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
+2025-10-28 20:21:49.630 | INFO     | pages.regpage:register_user_obj:81 - Filling registration fields with User test data
+2025-10-28 20:21:51.408 | INFO     | pages.regpage:register_user_obj:94 - All necessary fields are filled with Bobbins Hryapson, 'fitzgeraldanna@example.net' data, moving for log in
+2025-10-28 20:21:52.527 | INFO     | pages.regpage:register_user_obj:103 - New profile of Bobbins Hryapson, 'fitzgeraldanna@example.net' successfully created
+2025-10-28 20:21:52.528 | INFO     | pages.regpage:register_user_obj:104 - Filling login fields with User test data
+2025-10-28 20:21:53.825 | INFO     | pages.regpage:register_user_obj:112 - Entered Bobbins Hryapson, 'fitzgeraldanna@example.net' profile
+2025-10-28 20:21:53.830 | INFO     | pages.regpage:register_user_obj:120 - Password warning alert did not appear, continuing script
+2025-10-28 20:21:55.367 | INFO     | pages.regpage:register_user_obj:138 - Performed an exit from Bobbins Hryapson, 'fitzgeraldanna@example.net' profile
+2025-10-28 20:21:56.014 | INFO     | pages.homepage:open_reg_form:13 - Registration page is opened
+2025-10-28 20:21:56.038 | INFO     | pages.regpage:register_user_obj:81 - Filling registration fields with User test data
+2025-10-28 20:21:57.877 | INFO     | pages.regpage:register_user_obj:94 - All necessary fields are filled with Lopuh Dobkins, 'michelejenkins@example.net' data, moving for log in
+2025-10-28 20:21:59.285 | INFO     | pages.regpage:register_user_obj:103 - New profile of Lopuh Dobkins, 'michelejenkins@example.net' successfully created
+2025-10-28 20:21:59.285 | INFO     | pages.regpage:register_user_obj:104 - Filling login fields with User test data
+2025-10-28 20:22:00.209 | INFO     | pages.regpage:register_user_obj:112 - Entered Lopuh Dobkins, 'michelejenkins@example.net' profile
+2025-10-28 20:22:00.840 | INFO     | pages.regpage:register_user_obj:120 - Password warning alert did not appear, continuing script
+2025-10-28 20:22:02.484 | INFO     | pages.regpage:register_user_obj:138 - Performed an exit from Lopuh Dobkins, 'michelejenkins@example.net' profile

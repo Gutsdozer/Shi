@@ -1,6 +1,7 @@
 import time
 
 import pytest
+from selenium.common import NoSuchElementException
 from selenium.common.exceptions import TimeoutException, NoAlertPresentException
 from selenium.webdriver.support.expected_conditions import presence_of_element_located
 
@@ -112,17 +113,16 @@ class Regpage:
         log.info(f"Entered {user_obj} profile")
         #possibility of alert
         try:
-            alert = WebDriverWait(self.browser, 3).until(EC.alert_is_present())
+            alert = self.browser.switch_to.alert
             alert_text = alert.text
             log.info(f"Alert with text {alert_text} has appeared, accepting")
             alert.accept()
-        except TimeoutException:
+        except NoAlertPresentException:
             log.info(f"Password warning alert did not appear, continuing script")
 
         try:
-            profile_button = (WebDriverWait(self.browser, 3).until
-                              (EC.presence_of_element_located(ProfilePageLocators.PROFILE_BUTTON)))
-        except TimeoutException:
+            profile_button = self.browser.find_element(*ProfilePageLocators.PROFILE_BUTTON)
+        except NoSuchElementException:
             log.error(f"Element {profile_button} was not found")
             raise
         exit_button = self.browser.find_element(*ProfilePageLocators.EXIT_BUTTON)
