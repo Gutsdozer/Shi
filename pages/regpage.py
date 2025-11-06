@@ -102,7 +102,7 @@ class Regpage:
             raise
         assert "Учетная запись успешно создана" in info_message.text
         log.info(f"New profile of {user_obj} successfully created")
-        log.info(f"Filling login fields with User test data")
+        log.info(f"Filling login fields with {user_obj} test data")
         #logging in starts here
         login_email = self.browser.find_element(*LoginpageLocators.LOGIN_EMAIL)
         login_email.send_keys(user_obj.email)
