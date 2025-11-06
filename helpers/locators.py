@@ -1,5 +1,8 @@
 from selenium.webdriver.common.by import By
 
+class HomepageLocators:
+    REGISTRATION = (By.XPATH, '//*[text() = "Регистрация"]')
+
 class RegpageLocators:
     FIRST_NAME = (By.NAME, 'first_name')
     LAST_NAME = (By.XPATH, '//*[@name = "last_name"]')

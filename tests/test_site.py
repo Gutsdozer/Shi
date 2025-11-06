@@ -31,6 +31,8 @@ def test_registration_login_logout(browser):
     regpage = Regpage(browser)
     regpage.register_login_logout()
 
+
+#This is the main test which checks basic functionality of the site
 def test_registration_user_object(browser):
     homepage = Homepage(browser)
     homepage.open_reg_form()

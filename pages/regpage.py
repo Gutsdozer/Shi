@@ -75,11 +75,11 @@ class Regpage:
         exit_sign = self.browser.find_element(By.XPATH, '//*[@id="infoMessage"]/p')
         assert "Выход успешный" in exit_sign.text
 
-
+#This is the main method which includes all necessary functionality and locators
     def register_user_obj(self, user_obj):
         submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
         assert submit_button.is_displayed()
-        log.info(f"Filling registration fields with User test data")
+        log.info(f"Starting to fill registration fields with User objects test data")
         #new user registration starts here
         #using User class objects
         pages_helper.fill_text_line(self.browser, RegpageLocators.FIRST_NAME, user_obj.name)
@@ -125,6 +125,7 @@ class Regpage:
         except NoSuchElementException:
             log.error(f"Element {profile_button} was not found")
             raise
+        log.info(f"Performing an exit from the {user_obj} profile")
         exit_button = self.browser.find_element(*ProfilePageLocators.EXIT_BUTTON)
         action = ActionChains(self.browser)
         action.move_to_element(profile_button).move_to_element(exit_button).click().perform()

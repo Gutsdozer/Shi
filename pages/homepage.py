@@ -1,6 +1,7 @@
 from conftest import browser
 from selenium.webdriver.common.by import By
 from helpers.logger import log
+from helpers.locators import HomepageLocators
 
 
 class Homepage:
@@ -9,7 +10,7 @@ class Homepage:
         self.browser = browser
 
     def open_reg_form(self):
-        self.browser.find_element(By.XPATH, '//*[text() = "Регистрация"]').click()
+        self.browser.find_element(*HomepageLocators.REGISTRATION).click()
         log.info("Registration page is opened")
 
 
