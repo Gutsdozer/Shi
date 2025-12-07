@@ -1,9 +1,10 @@
 import os
+from http.client import responses
 from dotenv import load_dotenv
 from google import genai
 import json
 from google.genai import types
-from pydantic_core.core_schema import json_schema
+
 
 load_dotenv()
 api_key = os.getenv("GEMINI_API_KEY")
@@ -22,7 +23,8 @@ def generate_user_data(role_description):
                 "second_name": {"type":"string"},
                 "teuda": {"type":"string", "description":"Teuda is 9-digit string"},
                 "email": {"type":"string", "format":"email"},
-                "phone": {"type":"string"},
+                "phone": {"type":"string", "description":"phone number must use a standard Israeli number format as a string and starts with 055 or 053, "
+                                                         "for example: 0559561388"},
                 "birth_date":{"type":"string", "format":"date"},
                 "aliah_date":{"type":"string",  "description":"Aliah date must contain only 4-digits string (e.g. 2018)"},
                 "password": {"type":"string"}
@@ -32,6 +34,19 @@ def generate_user_data(role_description):
     #forming a prompt for data generation
     prompt = f"Generate realistic test data for a new user who is '{role_description}'"
 
-    
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type='application/json',
+                response_schema=json_schema
+            )
+        )
+        data_dict = json.loads(response.text)
+        return data_dict
+    except Exception as e:
+        print(f"Ошибка генерации: {e}")
+        return None
 
 

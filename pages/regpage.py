@@ -75,13 +75,13 @@ class Regpage:
         exit_sign = self.browser.find_element(By.XPATH, '//*[@id="infoMessage"]/p')
         assert "Выход успешный" in exit_sign.text
 
-#This is the main method which includes all necessary functionality and locators
+#This is the registration method that uses User class object for fixed test data
     def register_user_obj(self, user_obj):
         submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
         assert submit_button.is_displayed()
         log.info(f"Starting to fill registration fields with User objects test data")
         #new user registration starts here
-        #using User class objects
+        #using User class objects fields
         pages_helper.fill_text_line(self.browser, RegpageLocators.FIRST_NAME, user_obj.name)
         pages_helper.fill_text_line(self.browser, RegpageLocators.LAST_NAME, user_obj.second_name)
         pages_helper.fill_text_line(self.browser, RegpageLocators.TEUDA, user_obj.teuda)
@@ -137,6 +137,69 @@ class Regpage:
             raise
         assert "Выход успешный" in exit_sign.text
         log.info(f"Performed an exit from {user_obj} profile")
+
+#This is the registration method that uses an AI generated test data as a dictionaries
+    def register_generated_user_data(self, user_generated_data):
+        submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
+        assert submit_button.is_displayed()
+        log.info(f"Starting to fill registration fields with User objects test data")
+        #new user registration starts here
+        #using AI generated test data for filling required fields
+        pages_helper.fill_text_line(self.browser, RegpageLocators.FIRST_NAME, user_generated_data['name'])
+        pages_helper.fill_text_line(self.browser, RegpageLocators.LAST_NAME, user_generated_data['second_name'])
+        pages_helper.fill_text_line(self.browser, RegpageLocators.TEUDA, user_generated_data['teuda'])
+        pages_helper.select(self.browser, RegpageLocators.SEX, 'Мужской')
+        pages_helper.fill_text_line(self.browser, RegpageLocators.EMAIL, user_generated_data['email'])
+        pages_helper.fill_text_line(self.browser, RegpageLocators.PHONE, user_generated_data['phone'])
+        pages_helper.fill_text_line(self.browser, RegpageLocators.BIRTHDATE, user_generated_data['birth_date'])
+        pages_helper.fill_text_line(self.browser, RegpageLocators.ALIYA_YEAR, user_generated_data['aliah_date'])
+        pages_helper.fill_text_line(self.browser, RegpageLocators.PASSWORD, user_generated_data['password'])
+        pages_helper.fill_text_line(self.browser, RegpageLocators.PASSWORD_CONFIRM, user_generated_data['password'])
+        log.info(f"All necessary fields are filled with generated test data, moving for log in")
+        submit_button.click()
+        try:
+            info_message = (WebDriverWait(self.browser, 3)
+                            .until(EC.presence_of_element_located((By.ID, 'infoMessage'))))
+        except TimeoutException:
+            log.error(f"Element {info_message} was not found")
+            raise
+        assert "Учетная запись успешно создана" in info_message.text
+        log.info(f"New profile of generated user was successfully created")
+        log.info(f"Filling login fields with generated test data")
+        #logging in starts here
+        login_email = self.browser.find_element(*LoginpageLocators.LOGIN_EMAIL)
+        login_email.send_keys(user_generated_data['email'])
+        login_password = self.browser.find_element(*LoginpageLocators.PASSWORD)
+        login_password.send_keys(user_generated_data['password'])
+        submit_login = self.browser.find_element(*LoginpageLocators.SUBMIT_BUTTON)
+        submit_login.click()
+        log.info(f"Entered the newly created profile")
+        #possibility of alert
+        try:
+            alert = self.browser.switch_to.alert
+            alert_text = alert.text
+            log.info(f"Alert with text {alert_text} has appeared, accepting")
+            alert.accept()
+        except NoAlertPresentException:
+            log.info(f"Password warning alert did not appear, continuing script")
+
+        try:
+            profile_button = self.browser.find_element(*ProfilePageLocators.PROFILE_BUTTON)
+        except NoSuchElementException:
+            log.error(f"Element {profile_button} was not found")
+            raise
+        log.info(f"Performing an exit from the profile")
+        exit_button = self.browser.find_element(*ProfilePageLocators.EXIT_BUTTON)
+        action = ActionChains(self.browser)
+        action.move_to_element(profile_button).move_to_element(exit_button).click().perform()
+        try:
+            exit_sign = (WebDriverWait(self.browser, 3)
+                     .until(EC.presence_of_element_located(ProfilePageLocators.EXIT_SIGN)))
+        except TimeoutException:
+            log.error(f"Element {exit_sign} was not found")
+            raise
+        assert "Выход успешный" in exit_sign.text
+        log.info(f"Performed an exit from the profile")
 
 
 

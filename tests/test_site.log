@@ -1,21 +1,11 @@
-2025-11-06 21:59:36.708 | INFO     | conftest:browser:13 - Chrome browser is opened
-2025-11-06 21:59:43.028 | INFO     | conftest:browser:15 - Shishi shabbat site homepage is opened
-2025-11-06 21:59:44.106 | INFO     | pages.homepage:open_reg_form:14 - Registration page is opened
-2025-11-06 21:59:44.815 | INFO     | pages.homepage:open_reg_form:14 - Registration page is opened
-2025-11-06 21:59:44.861 | INFO     | pages.regpage:register_user_obj:82 - Starting to fill registration fields with User objects test data
-2025-11-06 21:59:46.744 | INFO     | pages.regpage:register_user_obj:95 - All necessary fields are filled with Bobbins Hryapson, 'larry79@example.com' data, moving for log in
-2025-11-06 21:59:48.045 | INFO     | pages.regpage:register_user_obj:105 - New profile of Bobbins Hryapson, 'larry79@example.com' successfully created
-2025-11-06 21:59:48.045 | INFO     | pages.regpage:register_user_obj:106 - Filling login fields with User test data
-2025-11-06 21:59:49.397 | INFO     | pages.regpage:register_user_obj:114 - Entered Bobbins Hryapson, 'larry79@example.com' profile
-2025-11-06 21:59:49.404 | INFO     | pages.regpage:register_user_obj:122 - Password warning alert did not appear, continuing script
-2025-11-06 21:59:49.433 | INFO     | pages.regpage:register_user_obj:129 - Performing an exit from the Bobbins Hryapson, 'larry79@example.com' profile
-2025-11-06 21:59:50.953 | INFO     | pages.regpage:register_user_obj:140 - Performed an exit from Bobbins Hryapson, 'larry79@example.com' profile
-2025-11-06 21:59:51.909 | INFO     | pages.homepage:open_reg_form:14 - Registration page is opened
-2025-11-06 21:59:51.945 | INFO     | pages.regpage:register_user_obj:82 - Starting to fill registration fields with User objects test data
-2025-11-06 21:59:54.897 | INFO     | pages.regpage:register_user_obj:95 - All necessary fields are filled with Lopuh Dobkins, 'amyavila@example.net' data, moving for log in
-2025-11-06 21:59:56.243 | INFO     | pages.regpage:register_user_obj:105 - New profile of Lopuh Dobkins, 'amyavila@example.net' successfully created
-2025-11-06 21:59:56.244 | INFO     | pages.regpage:register_user_obj:106 - Filling login fields with User test data
-2025-11-06 21:59:57.571 | INFO     | pages.regpage:register_user_obj:114 - Entered Lopuh Dobkins, 'amyavila@example.net' profile
-2025-11-06 21:59:57.575 | INFO     | pages.regpage:register_user_obj:122 - Password warning alert did not appear, continuing script
-2025-11-06 21:59:57.590 | INFO     | pages.regpage:register_user_obj:129 - Performing an exit from the Lopuh Dobkins, 'amyavila@example.net' profile
-2025-11-06 21:59:59.577 | INFO     | pages.regpage:register_user_obj:140 - Performed an exit from Lopuh Dobkins, 'amyavila@example.net' profile
+2025-12-07 22:12:46.912 | INFO     | conftest:browser:13 - Chrome browser is opened
+2025-12-07 22:12:49.949 | INFO     | conftest:browser:15 - Shishi shabbat site homepage is opened
+2025-12-07 22:12:51.086 | INFO     | pages.homepage:open_reg_form:14 - Registration page is opened
+2025-12-07 22:12:56.015 | INFO     | pages.regpage:register_generated_user_data:145 - Starting to fill registration fields with User objects test data
+2025-12-07 22:12:57.873 | INFO     | pages.regpage:register_generated_user_data:158 - All necessary fields are filled with generated test data, moving for log in
+2025-12-07 22:12:59.362 | INFO     | pages.regpage:register_generated_user_data:167 - New profile of generated user was successfully created
+2025-12-07 22:12:59.363 | INFO     | pages.regpage:register_generated_user_data:168 - Filling login fields with generated test data
+2025-12-07 22:13:01.022 | INFO     | pages.regpage:register_generated_user_data:176 - Entered the newly created profile
+2025-12-07 22:13:01.025 | INFO     | pages.regpage:register_generated_user_data:184 - Password warning alert did not appear, continuing script
+2025-12-07 22:13:01.046 | INFO     | pages.regpage:register_generated_user_data:191 - Performing an exit from the profile
+2025-12-07 22:13:02.831 | INFO     | pages.regpage:register_generated_user_data:202 - Performed an exit from the profile
