@@ -33,7 +33,7 @@ def test_registration_login_logout(browser):
     regpage.register_login_logout()
 
 
-#This is the main test which checks basic functionality of the site
+#This is the test which checks basic functionality of the site using User class objects
 def test_registration_user_object(browser):
     homepage = Homepage(browser)
     homepage.open_reg_form()
@@ -42,6 +42,7 @@ def test_registration_user_object(browser):
         homepage.open_reg_form()
         regpage.register_user_obj(user_data)
 
+#The second test does the same using AI generated test data
 def test_registration_generated_test_data(browser):
     homepage = Homepage(browser)
     homepage.open_reg_form()
