@@ -4,6 +4,7 @@ from dotenv import load_dotenv
 from google import genai
 import json
 from google.genai import types
+from helpers.logger import log
 
 
 load_dotenv()
@@ -13,6 +14,7 @@ if api_key:
     client = genai.Client(api_key=api_key) #client initialisation
 else:
     print("API key not found in the environment")
+    log.error("API key not found in the environment")
 
 def generate_user_data(role_description):
     #determining json schema, fields are equal to user object fields
@@ -47,6 +49,7 @@ def generate_user_data(role_description):
         return data_dict
     except Exception as e:
         print(f"Ошибка генерации: {e}")
+        log.error(f"Test data was not generated due to error: {e}")
         return None
 
 
