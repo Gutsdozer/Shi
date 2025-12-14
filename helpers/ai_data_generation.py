@@ -1,5 +1,4 @@
 import os
-from http.client import responses
 from dotenv import load_dotenv
 from google import genai
 import json
@@ -17,7 +16,7 @@ else:
     log.error("API key not found in the environment")
 
 def generate_user_data(role_description):
-    #determining json schema, fields are equal to user object fields
+    #determining json schema, fields are equal to User object fields
     json_schema = {
         "type":'object',
         'properties':
@@ -36,20 +35,17 @@ def generate_user_data(role_description):
     #forming a prompt for data generation
     prompt = f"Generate realistic test data for a new user who is '{role_description}'"
 
-    try:
-        response = client.models.generate_content(
-            model="gemini-2.5-flash",
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type='application/json',
-                response_schema=json_schema
+
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt,
+        config=types.GenerateContentConfig(
+        response_mime_type='application/json',
+        response_schema=json_schema
             )
         )
-        data_dict = json.loads(response.text)
-        return data_dict
-    except Exception as e:
-        print(f"Ошибка генерации: {e}")
-        log.error(f"Test data was not generated due to error: {e}")
-        return None
+    data_dict = json.loads(response.text)
+    return data_dict
+
 
 
