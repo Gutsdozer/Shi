@@ -24,7 +24,7 @@ class Regpage:
     def __init__(self, browser):
         self.browser = browser
 
-
+#This method is experimental and unused, test data is generated via Faker library
     def fill_reg_form_random_test_data(self):
         submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
         assert submit_button.is_displayed()
@@ -75,7 +75,7 @@ class Regpage:
         exit_sign = self.browser.find_element(By.XPATH, '//*[@id="infoMessage"]/p')
         assert "Выход успешный" in exit_sign.text
 
-#This is the registration method that uses User class object for fixed test data
+#This is the registration method that uses User class object for test data
     def register_user_obj(self, user_obj):
         submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
         assert submit_button.is_displayed()
@@ -138,7 +138,7 @@ class Regpage:
         assert "Выход успешный" in exit_sign.text
         log.info(f"Performed an exit from {user_obj} profile")
 
-#This is the registration method that uses an AI generated test data as a dictionaries
+#This is the registration method that uses test data generated with Google Gemini
     def register_generated_user_data(self, user_generated_data):
         submit_button = self.browser.find_element(By.XPATH, '//*[@type = "submit"]')
         assert submit_button.is_displayed()
